@@ -2,7 +2,7 @@
 <ContentPage 
      xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-     x:Class="KartyaJatek.MainPage"
+     x:Class="KartyaJatek.Login"
      NavigationPage.HasNavigationBar="False">
 
     
@@ -20,35 +20,34 @@
             WidthRequest="300">
 
             <Label
-                Text="Card Game"
+                Text="Login"
                 FontSize="32"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 TextColor="{DynamicResource PrimaryTextColor}" />
 
             <Entry
-                x:Name="RoomCodeEntry"
-                Placeholder="Enter room code"
+                x:Name="Usernamefield"
+                Placeholder="Enter username"
+                HorizontalOptions="Fill"
+                ClearButtonVisibility="WhileEditing" />
+            <Entry
+                x:Name="Passwordfield"
+                Placeholder="Enter password"
                 HorizontalOptions="Fill"
                 ClearButtonVisibility="WhileEditing" />
 
             <Button
-                x:Name="HostButton" 
-                Text="Host Game"
-                
+                x:Name="Loginbt" 
+                Text="Login"
+                Clicked="OnLoginClicked"
+
                 HorizontalOptions="Fill"
                 BackgroundColor="{DynamicResource PrimaryColor}"
                 TextColor="White"
                 CornerRadius="12" />
 
-            <Button
-                x:Name="JoinButton"
-                Text="Join Game"
-                
-                HorizontalOptions="Fill"
-                BackgroundColor="{DynamicResource SecondaryColor}"
-                TextColor="White"
-                CornerRadius="12" />
+           
         </VerticalStackLayout>
 
     </Grid>

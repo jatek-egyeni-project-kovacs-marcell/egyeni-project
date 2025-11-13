@@ -71,6 +71,9 @@
       <MauiXaml Update="Register.xaml">
         <SubType>Designer</SubType>
       </MauiXaml>
+      <MauiXaml Update="Lobby.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
     </ItemGroup>
 
     <ItemGroup>
@@ -80,6 +83,10 @@
       </Compile>
       <Compile Update="Register.xaml.cs">
         <DependentUpon>Register.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Lobby.xaml.cs">
+        <DependentUpon>Lobby.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>

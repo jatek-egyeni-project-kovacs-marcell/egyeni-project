@@ -8,6 +8,6 @@
     Shell.NavBarIsVisible="False">
     
     <ShellContent
-        ContentTemplate="{DataTemplate local:Login}"
-        Route="Login" />
+        ContentTemplate="{DataTemplate local:Lobby}"
+        Route="Lobby" />
 </Shell>

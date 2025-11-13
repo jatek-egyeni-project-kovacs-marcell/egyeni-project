@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="KartyaJatek.Lobby"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="10,*,Auto,*"
+          ColumnDefinitions="*,Auto,*">
+
+        <!-- Page Title -->
+        <Label
+            Text="Test lobby"
+            Grid.Row="1"
+            Grid.Column="1"
+            FontSize="32"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="{DynamicResource PrimaryTextColor}" />
+
+        <!-- Middle section -->
+        <VerticalStackLayout
+            Grid.Row="2"
+            Grid.Column="1"
+            Padding="30"
+            Spacing="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="300">
+
+            <!-- Lobby Code -->
+            <Label
+                Text="Lobby code: 1234567"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="{DynamicResource PrimaryTextColor}" />
+
+            <!-- Dynamic Player Cards Stack -->
+            <VerticalStackLayout
+                x:Name="PlayerCardsStack"
+                Spacing="10" />
+
+            <!-- Start Button -->
+            <Button
+                x:Name="StartBtn"
+                Text="Start"
+                HorizontalOptions="Fill"
+                BackgroundColor="{DynamicResource SecondaryColor}"
+                TextColor="White"
+                Clicked="StartBtn_Clicked"
+                CornerRadius="12" />
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

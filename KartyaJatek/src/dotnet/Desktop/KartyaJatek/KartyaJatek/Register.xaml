@@ -53,7 +53,22 @@
                 TextColor="White"
                 CornerRadius="12" />
 
-                
+            <Label
+                Text="Already have an account?"
+                FontSize="12"
+              
+                HorizontalOptions="Center"
+                TextColor="{DynamicResource PrimaryTextColor}" />
+
+            <Button
+                x:Name="tologbt" 
+                Text="Go to login"
+                Clicked="OnLogClicked"
+
+                HorizontalOptions="Fill"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                TextColor="White"
+                CornerRadius="12" />
 
            
         </VerticalStackLayout>

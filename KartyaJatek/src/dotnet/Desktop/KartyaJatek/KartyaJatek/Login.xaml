@@ -47,7 +47,23 @@
                 BackgroundColor="{DynamicResource PrimaryColor}"
                 TextColor="White"
                 CornerRadius="12" />
+            
+            <Label
+                Text="Don't have an account?"
+                FontSize="12"
+              
+                HorizontalOptions="Center"
+                TextColor="{DynamicResource PrimaryTextColor}" />
 
+            <Button
+                x:Name="toregbt" 
+                Text="Go to register"
+                Clicked="OnRegClicked"
+
+                HorizontalOptions="Fill"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                TextColor="White"
+                CornerRadius="12" />
            
         </VerticalStackLayout>
 

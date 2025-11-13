@@ -15,6 +15,8 @@ public partial class Login
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
+        Loginbt.IsVisible = false;
+        toregbt.IsVisible = false;
         string username = Usernamefield.Text;
         string password = Passwordfield.Text;
 
@@ -52,12 +54,21 @@ public partial class Login
             }
             else
             {
+                Loginbt.IsVisible = true;
+                toregbt.IsVisible = false;
                 await DisplayAlert("Error", "Invalid username or password", "OK");
             }
         }
         catch (Exception ex)
         {
+            Loginbt.IsVisible = true;
+            toregbt.IsVisible = false;
             await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
         }
+    }
+
+    private async void OnRegClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new Register());
     }
 }

@@ -15,6 +15,9 @@ public partial class Register
 
     private async void OnSubmitClicked(object sender, EventArgs e)
     {
+       
+        Registerbt.IsVisible = false;
+        tologbt.IsVisible = false;
         // Get values from Entry fields
         string name = Usernamefield.Text;
         string email = Emailfield.Text;
@@ -44,24 +47,38 @@ public partial class Register
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(url, player);
 
             if (response.IsSuccessStatusCode)
-            {
+            { 
+                await DisplayAlert("Success", "Player added!", "OK");
+                
                 // Navigate to login page
                 Application.Current.MainPage = new NavigationPage(new Login());
-                await DisplayAlert("Success", "Player added!", "OK");
+                tologbt.IsVisible = true;
+               
 
                 
             }
             else
             {
+                tologbt.IsVisible = true;
+                Registerbt.IsVisible = true;
                 await DisplayAlert("Error", $"Failed to add player. Status: {response.StatusCode}", "OK");
             }
         }
         catch (Exception ex)
         {
+            tologbt.IsVisible = true;
+            Registerbt.IsVisible = true;
             await DisplayAlert("Error", $"Exception: {ex.Message}", "OK");
         }
+        
+    }
+    private async void OnLogClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new Login());
     }
 }
+
+
 
 // Make sure this matches the backend model
 public class Player

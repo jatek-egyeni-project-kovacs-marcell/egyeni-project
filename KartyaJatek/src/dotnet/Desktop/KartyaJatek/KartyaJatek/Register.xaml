@@ -41,6 +41,7 @@
                 x:Name="Passwordfield"
                 Placeholder="Enter password"
                 HorizontalOptions="Fill"
+                IsPassword="True"
                 ClearButtonVisibility="WhileEditing" />
 
             <Button

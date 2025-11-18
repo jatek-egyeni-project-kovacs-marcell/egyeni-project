@@ -87,4 +87,5 @@ public class Player
     public int Score { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
+    public object Id { get; set; }
 }

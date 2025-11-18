@@ -56,7 +56,7 @@
                 TextColor="{DynamicResource PrimaryTextColor}" />
 
             <Button
-                x:Name="toregbt" 
+                x:Name="Toregbt" 
                 Text="Go to register"
                 Clicked="OnRegClicked"
 

@@ -21,6 +21,7 @@
 
             <Label
                 Text="Card Game"
+             
                 FontSize="32"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
@@ -39,6 +40,7 @@
                 HorizontalOptions="Fill"
                 BackgroundColor="{DynamicResource PrimaryColor}"
                 TextColor="White"
+                Clicked="HostButtonClicked"
                 CornerRadius="12" />
 
             <Button
